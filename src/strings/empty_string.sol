@@ -3,7 +3,3 @@ contract C {
         return "";
     }
 }
-// ====
-// compileToEwasm: also
-// ----
-// f() -> 0x20, 0

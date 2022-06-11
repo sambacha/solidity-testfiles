@@ -1,5 +1,5 @@
 library L {
-    function f(uint) pure external {}
+    function f(uint256) external pure {}
 }
 
 contract C {
@@ -11,4 +11,3 @@ contract C {
         x.f();
     }
 }
-// ----

@@ -1,19 +1,20 @@
 library D {
-    struct s { uint a; }
-    function mul(s storage self, uint x) public returns (uint) { return self.a *= x; }
-    function mul(s storage self, bytes32 x) public returns (bytes32) { }
+    struct s {
+        uint256 a;
+    }
+    function mul(s storage self, uint256 x)
+        public
+        returns (uint256)
+    {return self.a *= x;}
+
+    function mul(s storage self, bytes32 x) public returns (bytes32) {}
 }
+
 contract C {
     using D for D.s;
     D.s public x;
-    function f(uint a) public returns (uint) {
+    function f(uint256 a) public returns (uint256) {
         x.a = 6;
         return x.mul(a);
     }
 }
-// ====
-// compileToEwasm: false
-// ----
-// library: D
-// f(uint256): 7 -> 0x2a
-// x() -> 0x2a

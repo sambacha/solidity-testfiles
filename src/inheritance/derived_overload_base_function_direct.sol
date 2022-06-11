@@ -4,7 +4,6 @@ contract B {
     }
 }
 
-
 contract C is B {
     function f(uint256 i) public returns (uint256) {
         return 2 * i;
@@ -14,8 +13,3 @@ contract C is B {
         return f(1);
     }
 }
-
-// ====
-// compileToEwasm: also
-// ----
-// g() -> 2

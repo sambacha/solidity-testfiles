@@ -6,7 +6,6 @@ contract Base {
     }
 }
 
-
 contract Derived is Base {
     uint256 dataDerived;
 
@@ -21,10 +20,3 @@ contract Derived is Base {
         derived = dataDerived;
     }
 }
-
-// ====
-// compileToEwasm: also
-// ----
-// setData(uint256,uint256): 1, 2 -> true
-// getViaBase() -> 1
-// getViaDerived() -> 1, 2

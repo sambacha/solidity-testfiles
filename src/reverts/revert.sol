@@ -13,11 +13,3 @@ contract C {
         }
     }
 }
-
-// ====
-// compileToEwasm: also
-// ----
-// f() -> FAILURE
-// a() -> 42
-// g() -> FAILURE
-// a() -> 42

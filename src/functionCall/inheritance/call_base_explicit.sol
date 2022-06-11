@@ -1,15 +1,11 @@
 contract Base {
-	function f(uint n) public returns (uint) {
-		return 2 * n;
-	}
+    function f(uint256 n) public returns (uint256) {
+        return 2 * n;
+    }
 }
 
 contract Child is Base {
-	function g(uint n) public returns (uint) {
-		return Base.f(n);
-	}
+    function g(uint256 n) public returns (uint256) {
+        return Base.f(n);
+    }
 }
-// ====
-// compileToEwasm: also
-// ----
-// g(uint256): 4 -> 8

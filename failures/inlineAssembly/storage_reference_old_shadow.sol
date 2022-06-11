@@ -1,5 +1,5 @@
 contract C {
-    uint[] x;
+    uint256[] x;
     fallback() external {
         uint y_slot = 2;
         uint y_offset = 3;
@@ -11,4 +11,3 @@ contract C {
         y[0] = 2;
     }
 }
-// ----

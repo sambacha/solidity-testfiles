@@ -8,7 +8,6 @@ contract C {
     }
 }
 
-
 contract D {
     function f() public returns (uint256) {
         return (new C()).balance();
@@ -18,11 +17,3 @@ contract D {
         return (new C()).transfer(5);
     }
 }
-
-// ----
-// f() -> 1
-// gas irOptimized: 77051
-// gas legacy: 114884
-// g() -> 5
-// gas irOptimized: 77106
-// gas legacy: 115430

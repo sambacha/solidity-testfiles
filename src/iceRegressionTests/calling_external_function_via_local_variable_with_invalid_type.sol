@@ -4,5 +4,3 @@ contract C {
         getCallback();
     }
 }
-// ----
-// TypeError 2582: (76-96): Internal type cannot be used for external function type.

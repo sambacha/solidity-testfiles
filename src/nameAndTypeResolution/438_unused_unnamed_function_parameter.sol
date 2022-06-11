@@ -1,5 +1,3 @@
 contract C {
-    function f(uint) pure public {
-    }
+    function f(uint256) public pure {}
 }
-// ----

@@ -1,7 +1,6 @@
 contract B {
-    uint immutable x = 1;
-    function f() public pure returns (uint) {
+    uint256 immutable x = 1;
+    function f() public pure returns (uint256) {
         return x;
     }
 }
-// ----

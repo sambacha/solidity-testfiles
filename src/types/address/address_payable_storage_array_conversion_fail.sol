@@ -7,5 +7,3 @@ contract C {
         c = d;
     }
 }
-// ----
-// TypeError 7407: (172-173): Type address[] storage pointer is not implicitly convertible to expected type address payable[] storage pointer.

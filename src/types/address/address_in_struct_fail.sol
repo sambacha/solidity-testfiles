@@ -7,5 +7,3 @@ contract A {
         s.a = address(this);
     }
 }
-// ----
-// TypeError 7407: (110-123): Type address is not implicitly convertible to expected type address payable.

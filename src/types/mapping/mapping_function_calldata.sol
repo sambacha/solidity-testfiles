@@ -1,11 +1,8 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract test {
     struct S {
-        mapping (uint => uint) s;
+        mapping(uint256 => uint256) s;
     }
-    function f(S calldata b) external {
-    }
+    function f(S calldata b) external {}
 }
-// ----
-// TypeError 4103: (121-133): Types containing (nested) mappings can only be parameters or return variables of internal or library functions.
