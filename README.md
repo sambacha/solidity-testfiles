@@ -1,4 +1,12 @@
 
+Contracts sourced from:
+
+ethereum/solidity
+prettier-plugin-solidity
+prettier-config-solidity
+
+GPL-3.0 Licensed
+
 <pre>
 src/
 ├── abiEncoder
