@@ -1,8 +1,23 @@
 contract C {
-    enum E {a, b, c}
-    struct S {function (E X) external f; uint E;}
-    struct T {function (E T) external f; uint E;}
-    struct U {function (E E) external f;}
+    enum E {
+        a,
+        b,
+        c
+    }
+
+    struct S {
+        function (E X) external f;
+        uint256 E;
+    }
+
+    struct T {
+        function (E T) external f;
+        uint256 E;
+    }
+
+    struct U {
+        function (E E) external f;
+    }
 }
 // ----
 // Warning 6162: (58-61): Naming function type parameters is deprecated.

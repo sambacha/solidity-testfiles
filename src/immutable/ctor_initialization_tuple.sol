@@ -1,13 +1,13 @@
 contract C {
-    uint immutable x;
-    uint immutable y;
+    uint256 immutable x;
+    uint256 immutable y;
+
     constructor() {
         (x, y) = f();
     }
 
-    function f() internal pure returns(uint _x, uint _y) {
+    function f() internal pure returns (uint256 _x, uint256 _y) {
         _x = 3;
         _y = 4;
     }
-}
-// ----
+} // ----

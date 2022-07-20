@@ -1,18 +1,22 @@
 pragma abicoder v2;
 
 struct S {
-    uint x;
-    uint y;
+    uint256 x;
+    uint256 y;
 }
 
 library L {
-    function reverse(S calldata _s) internal pure returns (uint, uint) {
+    function reverse(S calldata _s) internal pure returns (uint256, uint256) {
         return (_s.y, _s.x);
     }
 }
 
 contract C {
-    function test(uint, S calldata _s, uint) external pure returns (uint, uint) {
+    function test(uint256, S calldata _s, uint256)
+        external
+        pure
+        returns (uint256, uint256)
+    {
         return L.reverse(_s);
     }
 }

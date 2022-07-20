@@ -1,7 +1,7 @@
 contract C {
     struct Y {
-        uint b;
+        uint256 b;
     }
+
     mapping(uint256 => Y) public m;
-}
-// ----
+} // ----

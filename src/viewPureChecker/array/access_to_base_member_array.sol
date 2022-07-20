@@ -1,12 +1,13 @@
 contract A {
-    uint[] x;
+    uint256[] x;
 }
 
 contract B is A {
-    function g() public pure returns (uint) {
+    function g() public pure returns (uint256) {
         return A.x.length;
     }
-    function h() public pure returns (uint) {
+
+    function h() public pure returns (uint256) {
         return A.x[2];
     }
 }

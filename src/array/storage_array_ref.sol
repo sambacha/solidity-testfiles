@@ -13,18 +13,20 @@ contract BinarySearch {
         uint256 _begin,
         uint256 _len,
         uint256 _value
-    ) private returns (uint256 o_position) {
+    )
+        private
+        returns (uint256 o_position)
+    {
         if (_len == 0 || (_len == 1 && _data[_begin] != _value))
-            return type(uint256).max; // failure
+        return type(uint256).max; // failure
         uint256 halfLen = _len / 2;
         uint256 v = _data[_begin + halfLen];
-        if (_value < v) return find(_data, _begin, halfLen, _value);
-        else if (_value > v)
-            return find(_data, _begin + halfLen + 1, halfLen - 1, _value);
-        else return _begin + halfLen;
+        if (_value < v) return find(_data, _begin, halfLen, _value); else if (
+            _value > v
+        ) return find(_data, _begin + halfLen + 1, halfLen - 1, _value); else
+        return _begin + halfLen;
     }
 }
-
 
 contract Store is BinarySearch {
     uint256[] data;
@@ -38,7 +40,6 @@ contract Store is BinarySearch {
         return find(data, v);
     }
 }
-
 // ----
 // find(uint256): 7 -> -1
 // add(uint256): 7 ->

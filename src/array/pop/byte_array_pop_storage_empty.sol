@@ -1,5 +1,6 @@
 contract c {
     bytes data;
+
     function test() public {
         data.push(0x07);
         data.push(0x05);

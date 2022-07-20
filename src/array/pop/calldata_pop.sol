@@ -1,5 +1,5 @@
 contract C {
-    function f(uint[] calldata x) external {
+    function f(uint256[] calldata x) external {
         x.pop();
     }
 }

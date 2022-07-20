@@ -1,10 +1,10 @@
 contract c {
-    function f () public
-    {
+    function f() public {
         a = ac;
         a = cd;
         a = b;
     }
+
     uint256 a;
     uint256 ab;
 }

@@ -1,16 +1,20 @@
 contract D {
-    function f(function() external returns (function() external returns (uint))[] memory x)
-        public returns (function() external returns (uint)[3] memory r) {
+    function f(
+        function() external returns (function() external returns (uint))[] memory x
+    )
+        public
+        returns (function() external returns (uint)[3] memory r)
+    {
         r[0] = x[0]();
         r[1] = x[1]();
         r[2] = x[2]();
     }
 }
 
-
 contract C {
     function test() public returns (uint256, uint256, uint256) {
-        function() external returns (function() external returns (uint))[] memory x =
+        function() external returns (function() external returns (uint))[] memory
+            x =
             new function() external returns (function() external returns (uint))[](10);
         for (uint256 i = 0; i < x.length; i++) x[i] = this.h;
         x[0] = this.htwo;
@@ -40,7 +44,6 @@ contract C {
         return this.e;
     }
 }
-
 // ----
 // test() -> 5, 6, 7
 // gas irOptimized: 262057

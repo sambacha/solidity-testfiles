@@ -1,8 +1,11 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
-    function f(uint a, uint16[] memory b, uint c)
-            public pure returns (uint, uint, uint) {
+    function f(uint256 a, uint16[] memory b, uint256 c)
+        public
+        pure
+        returns (uint256, uint256, uint256)
+    {
         return (b.length, b[a], c);
     }
 }

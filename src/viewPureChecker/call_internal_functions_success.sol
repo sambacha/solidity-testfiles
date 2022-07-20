@@ -1,8 +1,25 @@
 contract C {
-    function g() pure public { g(); }
-    function f() view public returns (uint) { f(); g(); }
-    function h() public { h(); g(); f(); }
-    function i() payable public { i(); h(); g(); f(); }
+    function g() public pure {
+        g();
+    }
+
+    function f() public view returns (uint256) {
+        f();
+        g();
+    }
+
+    function h() public {
+        h();
+        g();
+        f();
+    }
+
+    function i() public payable {
+        i();
+        h();
+        g();
+        f();
+    }
 }
 // ----
 // Warning 5740: (102-105): Unreachable code.

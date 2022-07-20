@@ -3,7 +3,6 @@ contract C {
         return a << b;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

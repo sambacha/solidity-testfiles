@@ -1,6 +1,5 @@
 contract C {
-    function f() public pure
-    {
+    function f() public pure {
         // RLO PDF
         bytes memory m = unicode" ok ‮‬";
 
@@ -10,5 +9,4 @@ contract C {
         // RLO RLO RLO PDF PDF PDF
         m = unicode" ok ‮‮‮‬‬‬";
     }
-}
-// ----
+} // ----

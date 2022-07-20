@@ -3,13 +3,20 @@ contract test {
         uint32 z;
         mapping(uint8 => s2) recursive;
     }
+
     s2 data;
+
     function check() public returns (bool ok) {
-        return data.z == 2 &&
-            data.recursive[0].z == 3 &&
-            data.recursive[0].recursive[1].z == 0 &&
-            data.recursive[0].recursive[0].z == 1;
+        return data.z
+            == 2
+            && data.recursive[0].z
+            == 3
+            && data.recursive[0].recursive[1].z
+            == 0
+            && data.recursive[0].recursive[0].z
+            == 1;
     }
+
     function set() public {
         data.z = 2;
         mapping(uint8 => s2) storage map = data.recursive;

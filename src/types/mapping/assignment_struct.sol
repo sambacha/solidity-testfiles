@@ -1,10 +1,12 @@
 contract test {
     struct str {
-        mapping(uint=>uint) map;
+        mapping(uint256 => uint256) map;
     }
+
     str data;
+
     function fun() public {
-        mapping(uint=>uint) storage a = data.map;
+        mapping(uint256 => uint256) storage a = data.map;
         data.map = a;
         (data.map) = a;
         (data.map, data.map) = (a, a);

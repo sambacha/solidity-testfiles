@@ -2,7 +2,8 @@ contract C {
     function f() public pure {
         assembly { pop(basefee()) }
     }
-    function g() public pure returns (uint) {
+
+    function g() public pure returns (uint256) {
         return block.basefee;
     }
 }

@@ -1,5 +1,5 @@
-pragma abicoder               v2;
+pragma abicoder v2;
+
 contract Test {
-    function f(uint[3][4] calldata) external { }
-}
-// ----
+    function f(uint256[3][4] calldata) external {}
+} // ----

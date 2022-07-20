@@ -1,11 +1,14 @@
 pragma abicoder v1;
+
 contract C {
     struct Y {
-        uint b;
+        uint256 b;
     }
+
     struct X {
         Y a;
     }
+
     mapping(uint256 => X) public m;
 }
 // ----

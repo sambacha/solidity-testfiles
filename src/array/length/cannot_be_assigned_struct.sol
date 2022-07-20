@@ -1,8 +1,10 @@
 contract C {
     struct S {
-        uint[] a;
+        uint256[] a;
     }
+
     S s;
+
     function f() public {
         s.a.length = 4;
     }

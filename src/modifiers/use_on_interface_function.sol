@@ -1,6 +1,9 @@
 interface I {
-  function f() external m pure returns (uint);
-  modifier m() { _; }
+    function f() external pure m returns (uint256);
+
+    modifier m() {
+        _;
+    }
 }
 // ----
 // SyntaxError 5842: (16-60): Functions in interfaces cannot have modifiers.

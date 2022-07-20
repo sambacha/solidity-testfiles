@@ -3,6 +3,7 @@ contract c {
         uint256 x;
         uint256 y;
     }
+
     Data[] data;
     uint256[] ids;
 
@@ -38,7 +39,6 @@ contract c {
         while (ids.length < l2) ids.push();
     }
 }
-
 // ----
 // getLengths() -> 0, 0
 // setLengths(uint256,uint256): 48, 49 ->

@@ -3,8 +3,7 @@ contract A {
 }
 
 contract Test {
-    function test() public pure returns(bytes memory) {
+    function test() public pure returns (bytes memory) {
         return type(A).creationCode;
     }
-}
-// ----
+} // ----

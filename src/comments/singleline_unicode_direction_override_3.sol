@@ -1,8 +1,6 @@
 contract C {
-    function f() public pure
-    {
-        // RLO
-        // overflow ‮
+    function f() public pure { // RLO
+            // overflow ‮
     }
 }
 // ----

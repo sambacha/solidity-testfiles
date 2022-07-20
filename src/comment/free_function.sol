@@ -3,21 +3,26 @@ function safe() pure returns (uint256 x) {
     /// @solidity memory-safe-assembly
     assembly { mstore(0, 0) }
 }
+
 function unsafe() pure returns (uint256 x) {
     assembly { pop(mload(0)) }
 }
+
 contract C {
     constructor() {
         unsafe();
     }
+
     function f() public pure {
         safe();
     }
 }
+
 contract D {
     constructor() {
         safe();
     }
+
     function f() public pure {
         unsafe();
     }

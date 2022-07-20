@@ -1,30 +1,39 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
-    function d() public {
-    }
-    function e() public payable returns (uint) {
+    function d() public {}
+
+    function e() public payable returns (uint256) {
         return msg.value;
     }
-    function f(uint a) public pure returns (uint, uint) {
+
+    function f(uint256 a) public pure returns (uint256, uint256) {
         return (a, a);
     }
-    function g() public  pure returns (uint, uint) {
+
+    function g() public pure returns (uint256, uint256) {
         return (2, 3);
     }
-    function h(uint x, uint y) public  pure returns (uint) {
-        unchecked { return x - y; }
+
+    function h(uint256 x, uint256 y) public pure returns (uint256) {
+        unchecked {
+            return x - y;
+        }
     }
-    function i(bool b) public  pure returns (bool) {
+
+    function i(bool b) public pure returns (bool) {
         return !b;
     }
+
     function j(bytes32 b) public pure returns (bytes32, bytes32) {
         return (b, b);
     }
-    function k() public pure returns (uint) {
+
+    function k() public pure returns (uint256) {
         return msg.data.length;
     }
-    function l(uint a) public pure returns (uint d) {
+
+    function l(uint256 a) public pure returns (uint256 d) {
         return a * 7;
     }
 }

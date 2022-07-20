@@ -1,5 +1,6 @@
 contract c {
-    uint[] data;
+    uint256[] data;
+
     function test() public {
         data.push(7);
         data.pop();

@@ -1,13 +1,11 @@
 contract C {
-    uint immutable x = 0;
-    uint y = 0;
+    uint256 immutable x = 0;
+    uint256 y = 0;
 
-    function f() readX internal {
-    }
+    function f() internal readX {}
 
     modifier readX() {
         _;
         y = x + 1;
     }
-}
-// ----
+} // ----

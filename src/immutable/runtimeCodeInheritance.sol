@@ -5,7 +5,7 @@ contract Base {
 contract Derived is Base {}
 
 contract Test {
-    function test() public pure returns(bytes memory) {
+    function test() public pure returns (bytes memory) {
         return type(Derived).runtimeCode;
     }
 }

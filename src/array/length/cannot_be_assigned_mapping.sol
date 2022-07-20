@@ -1,5 +1,6 @@
 contract C {
-    mapping(uint => uint[]) map;
+    mapping(uint256 => uint256[]) map;
+
     function f() public {
         map[0].length = 4;
     }

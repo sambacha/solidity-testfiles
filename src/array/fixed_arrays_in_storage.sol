@@ -3,8 +3,9 @@ contract c {
         uint256 x;
         uint256 y;
     }
-    Data[2**10] data;
-    uint256[2**10 + 3] ids;
+
+    Data[2 ** 10] data;
+    uint256[2 ** 10 + 3] ids;
 
     function setIDStatic(uint256 id) public {
         ids[2] = id;

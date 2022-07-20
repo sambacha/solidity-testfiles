@@ -1,7 +1,8 @@
 contract A {
-    uint public data;
-    uint public balance;
+    uint256 public data;
+    uint256 public balance;
     bytes public externalData;
+
     fallback() external payable {
         data += 1;
         balance = msg.value;

@@ -1,23 +1,27 @@
 contract C {
-    function f() view public {
+    function f() public view {
         payable(this).transfer(1);
     }
-    function g() view public {
+
+    function g() public view {
         require(payable(this).send(2));
     }
-    function h() view public {
+
+    function h() public view {
         selfdestruct(payable(this));
     }
-    function i() view public {
+
+    function i() public view {
         (bool success,) = address(this).delegatecall("");
         require(success);
     }
-    function j() view public {
+
+    function j() public view {
         (bool success,) = address(this).call("");
         require(success);
     }
-    receive() payable external {
-    }
+
+    receive() external payable {}
 }
 // ----
 // TypeError 8961: (52-77): Function cannot be declared as view because this expression (potentially) modifies the state.

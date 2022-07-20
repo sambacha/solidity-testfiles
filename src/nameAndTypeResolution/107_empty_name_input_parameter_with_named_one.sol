@@ -1,5 +1,5 @@
 contract test {
-    function f(uint, uint k) public returns (uint ret_k) {
+    function f(uint256, uint256 k) public returns (uint256 ret_k) {
         return k;
     }
 }

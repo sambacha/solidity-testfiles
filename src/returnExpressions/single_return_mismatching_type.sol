@@ -1,7 +1,5 @@
-contract C
-{
-    function g() public pure returns (uint)
-    {
+contract C {
+    function g() public pure returns (uint256) {
         return "string";
     }
 }

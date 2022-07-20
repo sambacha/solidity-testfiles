@@ -1,17 +1,19 @@
 contract C {
-    function balance() public returns (uint) {
+    function balance() public returns (uint256) {
         this.balance; // to avoid pureness warning
         return 1;
     }
-    function transfer(uint amount) public {
+
+    function transfer(uint256 amount) public {
         payable(this).transfer(amount); // to avoid pureness warning
     }
-    receive() payable external {
-    }
+
+    receive() external payable {}
 }
+
 contract D {
     function f() public {
-        uint x = (new C()).balance();
+        uint256 x = (new C()).balance();
         x;
         (new C()).transfer(5);
     }

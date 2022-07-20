@@ -6,7 +6,6 @@ contract C {
         return (z[0], z[1]);
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

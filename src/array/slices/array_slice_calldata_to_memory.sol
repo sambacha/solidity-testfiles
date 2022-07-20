@@ -1,23 +1,32 @@
 contract C {
-    function f(int[] calldata b, uint256 start, uint256 end) public returns (int) {
-        int[] memory m = b[start:end];
-        uint len = end - start;
+    function f(int256[] calldata b, uint256 start, uint256 end)
+        public
+        returns (int256)
+    {
+        int256[] memory m = b[start:end];
+        uint256 len = end - start;
         assert(len == m.length);
-        for (uint i = 0; i < len; i++) {
+        for (uint256 i = 0; i < len; i++) {
             assert(b[start:end][i] == m[i]);
         }
         return [b[start:end]][0][0];
     }
 
-    function g(int[] calldata b, uint256 start, uint256 end) public returns (int[] memory) {
+    function g(int256[] calldata b, uint256 start, uint256 end)
+        public
+        returns (int256[] memory)
+    {
         return b[start:end];
     }
 
-    function h1(int[] memory b) internal returns (int[] memory) {
+    function h1(int256[] memory b) internal returns (int256[] memory) {
         return b;
     }
 
-    function h(int[] calldata b, uint256 start, uint256 end) public returns (int[] memory) {
+    function h(int256[] calldata b, uint256 start, uint256 end)
+        public
+        returns (int256[] memory)
+    {
         return h1(b[start:end]);
     }
 }

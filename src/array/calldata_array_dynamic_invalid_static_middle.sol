@@ -1,5 +1,4 @@
-pragma abicoder               v2;
-
+pragma abicoder v2;
 
 contract C {
     function f(uint256[][1][] calldata a) external returns (uint256) {

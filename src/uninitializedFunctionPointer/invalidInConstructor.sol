@@ -1,23 +1,24 @@
 contract C {
+    function() internal storedFn;
 
-  function() internal storedFn;
+    bool flag;
 
-  bool flag;
-
-  constructor() {
-    if (!flag) {
-      flag = true;
-      function() internal invalid;
-      storedFn = invalid;
-      invalid();
+    constructor() {
+        if (!flag) {
+            flag = true;
+            function() internal invalid;
+            storedFn = invalid;
+            invalid();
+        }
     }
-  }
-  function f() public pure {}
+
+    function f() public pure {}
 }
+
 contract Test {
-  function f() public {
-    new C();
-  }
+    function f() public {
+        new C();
+    }
 }
 // ====
 // compileToEwasm: also

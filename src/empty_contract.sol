@@ -1,5 +1,4 @@
-contract test {
-}
+contract test {}
 // ====
 // allowNonExistingFunctions: true
 // compileToEwasm: also

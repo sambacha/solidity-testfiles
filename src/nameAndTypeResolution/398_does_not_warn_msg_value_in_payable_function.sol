@@ -1,6 +1,5 @@
 contract C {
-    function f() payable public {
+    function f() public payable {
         msg.value;
     }
-}
-// ----
+} // ----

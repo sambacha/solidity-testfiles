@@ -1,8 +1,8 @@
 contract C {
-    mapping(uint=>uint)[] array;
-    mapping(uint=>uint) map;
+    mapping(uint256 => uint256)[] array;
+    mapping(uint256 => uint256) map;
+
     function f() public {
         array.pop();
     }
-}
-// ----
+} // ----

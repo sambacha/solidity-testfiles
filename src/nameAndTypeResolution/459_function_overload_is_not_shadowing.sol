@@ -1,5 +1,4 @@
 contract C {
-    function f() pure public {}
-    function f(uint) pure public {}
-}
-// ----
+    function f() public pure {}
+    function f(uint256) public pure {}
+} // ----

@@ -3,18 +3,16 @@ contract A {
         return true;
     }
 
-    modifier mod virtual {
+    modifier mod() virtual {
         _;
     }
 }
 
-
 contract C is A {
-    modifier mod override {
+    modifier mod() override {
         if (false) _;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

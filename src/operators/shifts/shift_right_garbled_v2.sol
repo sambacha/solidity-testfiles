@@ -1,5 +1,4 @@
-pragma abicoder               v2;
-
+pragma abicoder v2;
 
 contract C {
     function f(uint8 a, uint8 b) public returns (uint256) {

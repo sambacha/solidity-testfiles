@@ -1,4 +1,3 @@
 interface I {
     event E();
-}
-// ----
+} // ----

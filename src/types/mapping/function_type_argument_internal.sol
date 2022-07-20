@@ -1,5 +1,3 @@
 contract C {
-    function f(function(mapping(uint=>uint) storage) internal) internal pure {
-    }
-}
-// ----
+    function f(function(mapping(uint=>uint) storage) internal) internal pure {}
+} // ----

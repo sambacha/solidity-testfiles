@@ -1,5 +1,4 @@
-pragma abicoder               v2;
-
+pragma abicoder v2;
 
 contract C {
     function f1(bytes[1] calldata a)
@@ -62,9 +61,7 @@ contract C {
         ];
     }
 }
-
 // via yul disabled because of stack issues.
-
 // ====
 // compileViaYul: false
 // ----

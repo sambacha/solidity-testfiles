@@ -1,12 +1,18 @@
 contract D {
-    uint x;
-    function f() public virtual view { x; }
-    function g() public virtual pure {}
+    uint256 x;
+
+    function f() public view virtual {
+        x;
+    }
+
+    function g() public pure virtual {}
 }
+
 contract C1 is D {
     function f() public override {}
-    function g() public virtual override view {}
+    function g() public view virtual override {}
 }
+
 contract C2 is D {
     function g() public override {}
 }

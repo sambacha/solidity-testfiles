@@ -1,10 +1,18 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
-    struct S { uint x; }
+    struct S {
+        uint256 x;
+    }
+
     S s;
-    struct T { uint y; }
+
+    struct T {
+        uint256 y;
+    }
+
     T t;
+
     function f() public view {
         bytes32 a = sha256(abi.encodePacked(s, t));
         a;

@@ -1,4 +1,3 @@
 contract c {
-	mapping(string => uint) data;
-}
-// ----
+    mapping(string => uint256) data;
+} // ----

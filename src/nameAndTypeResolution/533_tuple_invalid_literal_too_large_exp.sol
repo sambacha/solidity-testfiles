@@ -1,6 +1,6 @@
 contract C {
-    function f() pure public {
-        (2**270, 1);
+    function f() public pure {
+        (2 ** 270, 1);
     }
 }
 // ----

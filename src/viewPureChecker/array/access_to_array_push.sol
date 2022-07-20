@@ -1,7 +1,7 @@
 contract A {
-    uint[] x;
-    function g() public returns (uint) {
+    uint256[] x;
+
+    function g() public returns (uint256) {
         return x.push();
     }
-}
-// ----
+} // ----

@@ -1,5 +1,5 @@
 contract C {
-    function f(uint storage a) public {
+    function f(uint256 storage a) public {
         a = f;
     }
 }

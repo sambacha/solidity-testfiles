@@ -1,6 +1,5 @@
-contract C
-{
-    function f(uint x) public {
+contract C {
+    function f(uint256 x) public {
         assembly {
             x := callvalue()
         }

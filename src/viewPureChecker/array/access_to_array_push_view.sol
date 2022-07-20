@@ -1,6 +1,7 @@
 contract A {
-    uint[] x;
-    function f() public view returns (uint) {
+    uint256[] x;
+
+    function f() public view returns (uint256) {
         return x.push();
     }
 }

@@ -1,8 +1,9 @@
 contract C {
-    function f(C c) pure public returns (C) {
+    function f(C c) public pure returns (C) {
         return c;
     }
-    function g() pure public returns (bytes4) {
+
+    function g() public pure returns (bytes4) {
         // By passing `this`, we read from the state, even if f itself is pure.
         return f(this).f.selector;
     }

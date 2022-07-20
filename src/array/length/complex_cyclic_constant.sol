@@ -1,9 +1,10 @@
 contract C {
-    uint constant L2 = LEN - 10;
-    uint constant L1 = L2 / 10;
-    uint constant LEN = 10 + L1 * 5;
+    uint256 constant L2 = LEN - 10;
+    uint256 constant L1 = L2 / 10;
+    uint256 constant LEN = 10 + L1 * 5;
+
     function f() public {
-        uint[LEN] a;
+        uint256[LEN] a;
     }
 }
 // ----

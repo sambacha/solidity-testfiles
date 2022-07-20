@@ -3,7 +3,6 @@ contract A {
         super;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

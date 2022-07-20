@@ -1,6 +1,5 @@
 contract C {
-    function f() public pure
-    {
+    function f() public pure {
         // RLO RLO
         bytes memory m = unicode"overflow ‮‮";
     }

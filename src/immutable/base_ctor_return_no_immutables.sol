@@ -5,6 +5,5 @@ contract Parent {
 }
 
 contract Child is Parent {
-    uint public immutable baked = 123;
+    uint256 public immutable baked = 123;
 }
-

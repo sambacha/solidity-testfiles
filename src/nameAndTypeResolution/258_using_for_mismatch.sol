@@ -1,7 +1,13 @@
-library D { function double(bytes32 self) public returns (uint) { return 2; } }
+library D {
+    function double(bytes32 self) public returns (uint256) {
+        return 2;
+    }
+}
+
 contract C {
-    using D for uint;
-    function f(uint a) public returns (uint) {
+    using D for uint256;
+
+    function f(uint256 a) public returns (uint256) {
         return a.double();
     }
 }

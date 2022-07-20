@@ -14,9 +14,7 @@ contract BaseBase {
     }
 }
 
-
 contract Base is BaseBase(BaseBase.g()) {}
-
 
 contract Derived is Base {
     function getA() public returns (uint256 r) {
@@ -27,6 +25,5 @@ contract Derived is Base {
         return 2;
     }
 }
-
 // ----
 // getA() -> 2

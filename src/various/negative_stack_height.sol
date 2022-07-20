@@ -1,5 +1,6 @@
 contract C {
     mapping(uint256 => Invoice) public invoices;
+
     struct Invoice {
         uint256 AID;
         bool Aboola;
@@ -58,9 +59,7 @@ contract C {
         )
     {}
 }
-
 // via yul disabled because of stack issues.
-
 // ====
 // compileViaYul: false
 // ----

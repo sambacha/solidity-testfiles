@@ -4,13 +4,11 @@ contract A {
     }
 }
 
-
 contract B is A {
     function f() public virtual override returns (uint256 r) {
         return super.f() | 2;
     }
 }
-
 
 contract C is A {
     function f() public virtual override returns (uint256 r) {
@@ -18,13 +16,11 @@ contract C is A {
     }
 }
 
-
 contract D is B, C {
-    function f() public override(B, C) returns (uint256 r) {
+    function f() public override (B, C) returns (uint256 r) {
         return super.f() | 8;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

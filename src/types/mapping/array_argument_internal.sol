@@ -1,5 +1,3 @@
 contract C {
-    function f(mapping(uint => uint)[] storage) internal pure {
-    }
-}
-// ----
+    function f(mapping(uint256 => uint256)[] storage) internal pure {}
+} // ----

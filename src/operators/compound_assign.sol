@@ -1,13 +1,14 @@
 contract test {
-	uint value1;
-	uint value2;
-	function f(uint x, uint y) public returns (uint w) {
-		uint value3 = y;
-		value1 += x;
-		value3 *= x;
-		value2 *= value3 + value1;
-		return value2 += 7;
-	}
+    uint256 value1;
+    uint256 value2;
+
+    function f(uint256 x, uint256 y) public returns (uint256 w) {
+        uint256 value3 = y;
+        value1 += x;
+        value3 *= x;
+        value2 *= value3 + value1;
+        return value2 += 7;
+    }
 }
 // ====
 // compileToEwasm: also

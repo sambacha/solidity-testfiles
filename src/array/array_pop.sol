@@ -1,7 +1,7 @@
 contract C {
-    uint[] data;
+    uint256[] data;
+
     function test() public {
-      data.pop();
+        data.pop();
     }
-}
-// ----
+} // ----

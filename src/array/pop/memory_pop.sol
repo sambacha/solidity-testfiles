@@ -1,6 +1,6 @@
 contract C {
     function f() public {
-        uint[] memory x;
+        uint256[] memory x;
         x.pop();
     }
 }

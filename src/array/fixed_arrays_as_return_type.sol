@@ -8,7 +8,6 @@ contract A {
     }
 }
 
-
 contract B {
     function f() public returns (uint16[5] memory res, uint16[5] memory res2) {
         A a = new A();
@@ -16,7 +15,6 @@ contract B {
         res2 = a.f(1000);
     }
 }
-
 // ----
 // f() -> 2, 3, 4, 5, 6, 1000, 1001, 1002, 1003, 1004
 // gas irOptimized: 116813

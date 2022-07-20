@@ -1,5 +1,5 @@
 contract C {
-    uint immutable x = 0;
+    uint256 immutable x = 0;
 
     function f() internal {
         x = 1;

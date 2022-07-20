@@ -2,7 +2,14 @@ bytes constant a = "\x03\x01\x02";
 bytes constant b = hex"030102";
 string constant c = "hello";
 uint256 constant x = 56;
-enum ActionChoices {GoLeft, GoRight, GoStraight, Sit}
+
+enum ActionChoices {
+    GoLeft,
+    GoRight,
+    GoStraight,
+    Sit
+}
+
 ActionChoices constant choices = ActionChoices.GoRight;
 bytes32 constant st = "abc\x00\xff__";
 
@@ -19,11 +26,10 @@ contract C {
         return bytes(c);
     }
 
-    function i() public returns (uint, ActionChoices, bytes32) {
+    function i() public returns (uint256, ActionChoices, bytes32) {
         return (x, choices, st);
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

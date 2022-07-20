@@ -1,13 +1,11 @@
-contract C
-{
-	modifier m {
-		uint x;
-		assembly {
-			x := callvalue()
-		}
-		_;
-	}
-    function f() m public payable {
+contract C {
+    modifier m() {
+        uint256 x;
+        assembly {
+    x := callvalue()
     }
-}
-// ----
+        _;
+    }
+
+    function f() public payable m {}
+} // ----

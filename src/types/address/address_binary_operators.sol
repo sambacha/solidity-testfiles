@@ -1,6 +1,7 @@
 contract C {
     address a;
-    function f() public pure returns(bool) {
+
+    function f() public pure returns (bool) {
         a = address(0) + address(0);
         a = address(0) - address(0);
         a = address(0) * address(0);

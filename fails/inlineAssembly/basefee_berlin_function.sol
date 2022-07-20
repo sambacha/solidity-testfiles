@@ -1,0 +1,22 @@
+contract C {
+    function f() public view returns (uint256 ret) {
+        assembly {
+            let basefee := sload(0)
+            ret := basefee
+        }
+    }
+
+    function g() public pure returns (uint256 ret) {
+        assembly {
+            function basefee() -> r {
+                r := 1000
+            }
+            ret := basefee()
+        }
+    }
+}
+// ====
+// EVMVersion: <=berlin
+// ----
+// f() -> 0
+// g() -> 1000

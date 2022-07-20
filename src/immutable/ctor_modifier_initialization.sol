@@ -1,10 +1,11 @@
 contract C {
-    uint immutable x;
-    constructor() initX {
-    }
+    uint256 immutable x;
+
+    constructor() initX {}
 
     modifier initX() {
-        _; x = 23;
+        _;
+        x = 23;
     }
 }
 // ----

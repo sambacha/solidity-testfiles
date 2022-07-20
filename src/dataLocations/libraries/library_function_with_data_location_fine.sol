@@ -1,11 +1,47 @@
 library L {
-    struct S { uint x; }
-    function f(uint[] memory, uint[] storage, S storage) private pure
-        returns (mapping(uint => uint) storage a, S memory b, uint[] storage c) { return (a, b, c); }
-    function g(uint[] memory, uint[] storage) internal pure
-        returns (mapping(uint => uint) storage a, S memory b, uint[] storage c) { return (a, b, c); }
-    function h(uint[] memory, uint[] storage) public pure returns (S storage x) { return x; }
-    function i(uint[] calldata, uint[] storage) external pure returns (S storage x) {return x; }
+    struct S {
+        uint256 x;
+    }
+
+    function f(uint256[] memory, uint256[] storage, S storage)
+        private
+        pure
+        returns (
+            mapping(uint256 => uint256) storage a,
+            S memory b,
+            uint256[] storage c
+        )
+    {
+        return (a, b, c);
+    }
+
+    function g(uint256[] memory, uint256[] storage)
+        internal
+        pure
+        returns (
+            mapping(uint256 => uint256) storage a,
+            S memory b,
+            uint256[] storage c
+        )
+    {
+        return (a, b, c);
+    }
+
+    function h(uint256[] memory, uint256[] storage)
+        public
+        pure
+        returns (S storage x)
+    {
+        return x;
+    }
+
+    function i(uint256[] calldata, uint256[] storage)
+        external
+        pure
+        returns (S storage x)
+    {
+        return x;
+    }
 }
 // ----
 // TypeError 3464: (197-198): This variable is of storage pointer type and can be accessed without prior assignment, which would lead to undefined behaviour.

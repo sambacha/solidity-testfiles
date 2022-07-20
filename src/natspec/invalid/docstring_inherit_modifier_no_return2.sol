@@ -1,10 +1,14 @@
 contract A {
-	/// @return a
-	function g(int x) public virtual { return 2; }
+    /// @return a
+    function g(int256 x) public virtual {
+        return 2;
+    }
 }
 
 contract B is A {
-	function g(int x) public pure override returns (int b) { return 2; }
+    function g(int256 x) public pure override returns (int256 b) {
+        return 2;
+    }
 }
 // ----
 // DocstringParsingError 2604: (14-27): Documentation tag "@return a" exceeds the number of return parameters.

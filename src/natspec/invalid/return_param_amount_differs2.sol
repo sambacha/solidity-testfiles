@@ -11,5 +11,5 @@ contract Thing is IThing {
         uint128 y;
     }
 
-    mapping(uint256=>Value) public override value;
+    mapping(uint256 => Value) public override value;
 }

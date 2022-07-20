@@ -1,6 +1,7 @@
 contract C {
-    uint x;
-    function f() public pure returns (uint) {
+    uint256 x;
+
+    function f() public pure returns (uint256) {
         return x;
     }
 }

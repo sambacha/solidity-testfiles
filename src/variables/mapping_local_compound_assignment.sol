@@ -1,6 +1,7 @@
 contract test {
     mapping(uint8 => uint8) m1;
     mapping(uint8 => uint8) m2;
+
     function f() public returns (uint8, uint8, uint8, uint8) {
         mapping(uint8 => uint8) storage m = m1;
         m[1] = 42;

@@ -1,7 +1,8 @@
 contract C {
-    uint immutable x;
+    uint256 immutable x;
+
     function f() public view {
-        uint t;
+        uint256 t;
         assembly {
             t := x
         }

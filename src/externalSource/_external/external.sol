@@ -1,2 +1,1 @@
-contract External {
-}
+contract External {}

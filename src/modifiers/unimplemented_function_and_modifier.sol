@@ -1,29 +1,46 @@
 abstract contract A {
-  function foo() public virtual;
-  function foo(uint x) virtual public returns(uint);
-  modifier mod() virtual;
+    function foo() public virtual;
+    function foo(uint256 x) public virtual returns (uint256);
+    modifier mod() virtual;
 }
 
 contract B is A {
-  function foo(uint x) override public returns(uint) {return x;}
-  modifier mod() override { _; }
+    function foo(uint256 x) public override returns (uint256) {
+        return x;
+    }
+
+    modifier mod() override {
+        _;
+    }
 }
 
 contract C is A {
-  function foo() public override {}
-  modifier mod() override { _; }
+    function foo() public override {}
+
+    modifier mod() override {
+        _;
+    }
 }
 
 contract D is A {
-  function foo() public override {}
-  function foo(uint x) override public returns(uint) {return x;}
+    function foo() public override {}
+
+    function foo(uint256 x) public override returns (uint256) {
+        return x;
+    }
 }
 
 /* No errors */
 contract E is A {
-  function foo() public override {}
-  function foo(uint x) override public returns(uint) {return x;}
-  modifier mod() override { _;}
+    function foo() public override {}
+
+    function foo(uint256 x) public override returns (uint256) {
+        return x;
+    }
+
+    modifier mod() override {
+        _;
+    }
 }
 // ----
 // TypeError 3656: (137-254): Contract "B" should be marked as abstract.

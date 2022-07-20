@@ -1,8 +1,9 @@
 contract C {
     function f() private pure {}
+
     function a() public {
-        uint x;
-        uint y;
+        uint256 x;
+        uint256 y;
         (x, y) = (f(), f());
     }
 }
