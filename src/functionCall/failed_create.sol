@@ -1,17 +1,20 @@
-contract D { constructor() payable {} }
+contract D {
+    constructor() payable {}
+}
+
 contract C {
-	uint public x;
-	constructor() payable {}
-	function f(uint amount) public returns (D) {
-		x++;
-		return (new D){value: amount}();
-	}
-	function stack(uint depth) public payable returns (address) {
-		if (depth > 0)
-			return this.stack(depth - 1);
-		else
-			return address(f(0));
-	}
+    uint256 public x;
+
+    constructor() payable {}
+
+    function f(uint256 amount) public returns (D) {
+        x++;
+        return (new D){value: amount}();
+    }
+
+    function stack(uint256 depth) public payable returns (address) {
+        if (depth > 0) return this.stack(depth - 1); else return address(f(0));
+    }
 }
 // ====
 // EVMVersion: >=byzantium

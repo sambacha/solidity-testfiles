@@ -1,7 +1,7 @@
 contract B {
-    uint immutable x = 3;
+    uint256 immutable x = 3;
 
-    function readX() internal view virtual returns(uint) {
+    function readX() internal view virtual returns (uint256) {
         return x;
     }
 }
@@ -11,8 +11,7 @@ contract C is B {
         super.readX();
     }
 
-    function readX() internal pure override returns(uint) {
+    function readX() internal pure override returns (uint256) {
         return 1;
     }
-}
-// ----
+} // ----

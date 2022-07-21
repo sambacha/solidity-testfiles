@@ -3,7 +3,8 @@ contract c {
         uint256 a;
         uint256 b;
     }
-    uint[75] r;
+
+    uint256[75] r;
     Struct data1;
     Struct data2;
 
@@ -15,7 +16,6 @@ contract c {
         return data2.a == data1.a && data2.b == data1.b;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

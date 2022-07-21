@@ -1,4 +1,3 @@
 contract test {
-    function f(uint) public { }
-}
-// ----
+    function f(uint256) public {}
+} // ----

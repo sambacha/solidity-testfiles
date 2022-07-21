@@ -1,15 +1,26 @@
 contract Test {
-    bytes32 constant public b = "abcdefghijklmnopq";
-    string constant public x = "abefghijklmnopqabcdefghijklmnopqabcdefghijklmnopqabca";
+    bytes32 public constant b = "abcdefghijklmnopq";
+    string public constant x =
+        "abefghijklmnopqabcdefghijklmnopqabcdefghijklmnopqabca";
 
     constructor() {
         string memory xx = x;
         bytes32 bb = b;
     }
-    function getB() public returns (bytes32) { return b; }
-    function getX() public returns (string memory) { return x; }
-    function getX2() public returns (string memory r) { r = x; }
-    function unused() public returns (uint) {
+
+    function getB() public returns (bytes32) {
+        return b;
+    }
+
+    function getX() public returns (string memory) {
+        return x;
+    }
+
+    function getX2() public returns (string memory r) {
+        r = x;
+    }
+
+    function unused() public returns (uint256) {
         "unusedunusedunusedunusedunusedunusedunusedunusedunusedunusedunusedunused";
         return 2;
     }

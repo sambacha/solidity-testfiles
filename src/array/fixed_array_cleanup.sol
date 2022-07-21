@@ -1,11 +1,15 @@
 contract c {
-    uint spacer1;
-    uint spacer2;
-    uint[20] data;
+    uint256 spacer1;
+    uint256 spacer2;
+    uint256[20] data;
+
     function fill() public {
-        for (uint i = 0; i < data.length; ++i) data[i] = i+1;
+        for (uint256 i = 0; i < data.length; ++i) data[i] = i + 1;
     }
-    function clear() public { delete data; }
+
+    function clear() public {
+        delete data;
+    }
 }
 // ====
 // compileToEwasm: also

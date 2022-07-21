@@ -1,7 +1,9 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
-	function f(bool b) public pure returns (bool) { return b; }
+    function f(bool b) public pure returns (bool) {
+        return b;
+    }
 }
 // ====
 // compileToEwasm: also

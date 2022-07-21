@@ -5,7 +5,10 @@ interface ERC165 {
     ///  uses less than 30,000 gas.
     /// @return `true` if the contract implements `interfaceID` and
     ///  `interfaceID` is not 0xffffffff, `false` otherwise
-    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+    function supportsInterface(bytes4 interfaceID)
+        external
+        view
+        returns (bool);
 }
 
 abstract contract ERC165MappingImplementation is ERC165 {
@@ -16,7 +19,12 @@ abstract contract ERC165MappingImplementation is ERC165 {
         supportedInterfaces[this.supportsInterface.selector] = true;
     }
 
-    function supportsInterface(bytes4 interfaceID) external view override returns (bool) {
+    function supportsInterface(bytes4 interfaceID)
+        external
+        view
+        override
+        returns (bool)
+    {
         return supportedInterfaces[interfaceID];
     }
 }
@@ -39,7 +47,6 @@ contract Lisa is ERC165MappingImplementation, Simpson {
         return "yellow";
     }
 }
-
 // ----
 // supportsInterface(bytes4): left(0x01ffc9a0) -> false
 // supportsInterface(bytes4): left(0x01ffc9a7) -> true

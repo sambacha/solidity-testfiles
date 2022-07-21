@@ -1,15 +1,20 @@
 contract C {
-    struct S { uint x; }
+    struct S {
+        uint256 x;
+    }
+
     S s;
-    function f() view internal returns (S storage) {
+
+    function f() internal view returns (S storage) {
         return s;
     }
+
     function g() public {
         f().x = 2;
     }
-    function h() view public {
+
+    function h() public view {
         f();
         f().x;
     }
-}
-// ----
+} // ----

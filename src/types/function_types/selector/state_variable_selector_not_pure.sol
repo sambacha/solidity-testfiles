@@ -1,6 +1,7 @@
 contract A {
     function() external public f;
 }
+
 contract B {
     function() external public g;
 }

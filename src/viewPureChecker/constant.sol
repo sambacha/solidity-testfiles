@@ -1,7 +1,7 @@
 contract C {
-    uint constant x = 2;
-    function k() pure public returns (uint) {
+    uint256 constant x = 2;
+
+    function k() public pure returns (uint256) {
         return x;
     }
-}
-// ----
+} // ----

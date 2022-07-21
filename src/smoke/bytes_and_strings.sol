@@ -2,12 +2,15 @@ contract C {
     function e(bytes memory b) public pure returns (bytes memory) {
         return b;
     }
+
     function f() public pure returns (string memory, string memory) {
         return ("any", "any");
     }
-    function g() public pure returns (string memory, uint, string memory) {
+
+    function g() public pure returns (string memory, uint256, string memory) {
         return ("any", 42, "any");
     }
+
     function h() public pure returns (string memory) {
         return "any";
     }

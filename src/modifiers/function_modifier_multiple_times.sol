@@ -1,5 +1,6 @@
 contract C {
     uint256 public a;
+
     modifier mod(uint256 x) {
         a += x;
         _;
@@ -9,7 +10,6 @@ contract C {
         return a;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

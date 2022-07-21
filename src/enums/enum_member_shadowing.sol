@@ -1,12 +1,17 @@
 contract C {
     struct S {
-        uint x;
+        uint256 x;
     }
 
-    enum E {E, S, C, a, f}
+    enum E {
+        E,
+        S,
+        C,
+        a,
+        f
+    }
 
-    uint a;
+    uint256 a;
 
     function f() public pure {}
-}
-// ----
+} // ----

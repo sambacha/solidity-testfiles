@@ -2,6 +2,7 @@ contract B {
     function f() external {}
     function g() internal {}
 }
+
 contract C is B {
     function i() public {
         B.f();

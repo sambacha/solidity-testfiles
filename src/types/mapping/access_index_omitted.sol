@@ -1,5 +1,6 @@
 contract C {
-    mapping(uint => uint) m;
+    mapping(uint256 => uint256) m;
+
     function f() public {
         m[] = 3;
     }

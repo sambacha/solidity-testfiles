@@ -12,7 +12,6 @@ library L {
     }
 }
 
-
 contract C {
     function f() public returns (uint256) {
         uint256[] memory x = new uint256[](7);
@@ -21,6 +20,5 @@ contract C {
         return x[3];
     }
 }
-
 // ----
 // f() -> 2

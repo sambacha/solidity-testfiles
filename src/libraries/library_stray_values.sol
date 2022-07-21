@@ -1,6 +1,11 @@
-library Lib { function m(uint x, uint y) public returns (uint) { return x * y; } }
+library Lib {
+    function m(uint256 x, uint256 y) public returns (uint256) {
+        return x * y;
+    }
+}
+
 contract Test {
-    function f(uint x) public returns (uint) {
+    function f(uint256 x) public returns (uint256) {
         Lib;
         Lib.m;
         return x + 9;

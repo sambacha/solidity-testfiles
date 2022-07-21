@@ -1,6 +1,11 @@
 contract C {
     bytes s;
-    function f(bytes calldata c, string memory m) public view returns (bytes3 r1, bytes16 r2, bytes32 r3) {
+
+    function f(bytes calldata c, string memory m)
+        public
+        view
+        returns (bytes3 r1, bytes16 r2, bytes32 r3)
+    {
         require(c.length >= 3, "");
         r2 = s;
         r1 = c[0:3];

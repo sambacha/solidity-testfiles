@@ -1,15 +1,13 @@
-contract C
-{
-    function f() public pure returns (uint a, uint b)
-    {
+contract C {
+    function f() public pure returns (uint256 a, uint256 b) {
         return 1;
     }
-    function g() public pure returns (uint a, uint b)
-    {
+
+    function g() public pure returns (uint256 a, uint256 b) {
         return (1, 2, 3);
     }
-    function h() public pure returns (uint a, uint b)
-    {
+
+    function h() public pure returns (uint256 a, uint256 b) {
         return;
     }
 }

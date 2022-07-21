@@ -1,6 +1,10 @@
 pragma abicoder v1;
+
 contract C {
-    struct S { string[] s; }
+    struct S {
+        string[] s;
+    }
+
     function f() public pure returns (S memory x) {}
 }
 // ----

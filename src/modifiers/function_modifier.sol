@@ -3,11 +3,10 @@ contract C {
         return 1;
     }
 
-    modifier nonFree {
+    modifier nonFree() {
         if (msg.value > 0) _;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

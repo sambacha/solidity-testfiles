@@ -4,7 +4,8 @@ contract test {
         int64 b = 4;
         fixed c = b;
         ufixed d = a;
-        c; d;
+        c;
+        d;
     }
 }
 // ----

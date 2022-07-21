@@ -1,4 +1,3 @@
 contract test {
-    function f() payable external {}
-}
-// ----
+    function f() external payable {}
+} // ----

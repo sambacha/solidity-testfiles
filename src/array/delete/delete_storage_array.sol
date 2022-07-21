@@ -1,7 +1,7 @@
 contract C {
-    uint[] data;
+    uint256[] data;
 
-    function len() public returns (uint ret) {
+    function len() public returns (uint256 ret) {
         data.push(234);
         data.push(123);
         delete data;
@@ -10,7 +10,7 @@ contract C {
         }
     }
 
-    function val() public returns (uint ret) {
+    function val() public returns (uint256 ret) {
         assembly {
             sstore(0, 2)
             mstore(0, 0)
@@ -23,7 +23,7 @@ contract C {
 
         delete data;
 
-        uint size = 999;
+        uint256 size = 999;
 
         assembly {
             size := sload(0)
@@ -32,7 +32,6 @@ contract C {
         }
     }
 }
-
 // ----
 // len() -> 0
 // val() -> 0

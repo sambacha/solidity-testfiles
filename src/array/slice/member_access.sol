@@ -1,6 +1,6 @@
 // Used to cause ICE
 contract C {
-    function f(uint[] calldata x) external pure {
+    function f(uint256[] calldata x) external pure {
         x[1:2].a;
     }
 }

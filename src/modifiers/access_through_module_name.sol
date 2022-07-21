@@ -1,15 +1,20 @@
-==== Source: a ====
 import "a" as M;
-contract C {
-    uint public x;
-    modifier m { x = 1; _; }
 
-    function f() public M.M.C.m returns (uint t, uint r) {
+contract C {
+    uint256 public x;
+
+    modifier m() {
+        x = 1;
+        _;
+    }
+
+    function f() public M.M.C.m returns (uint256 t, uint256 r) {
         t = x;
         x = 3;
         r = 9;
     }
-    function g() public m returns (uint t, uint r) {
+
+    function g() public m returns (uint256 t, uint256 r) {
         t = x;
         x = 4;
         r = 10;

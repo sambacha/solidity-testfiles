@@ -1,11 +1,12 @@
 contract A {
-    uint x;
+    uint256 x;
 }
 
 contract B is A {
-    function f() public pure returns (uint) {
+    function f() public pure returns (uint256) {
         return A.x;
     }
+
     function g() public view {
         A.x = 5;
     }

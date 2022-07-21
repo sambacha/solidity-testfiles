@@ -8,8 +8,7 @@ contract C {
 }
 
 contract D {
-    receive() external payable {
-    }
+    receive() external payable {}
 }
 // ----
 // TypeError 9574: (47-83): Type address is not implicitly convertible to expected type address payable.

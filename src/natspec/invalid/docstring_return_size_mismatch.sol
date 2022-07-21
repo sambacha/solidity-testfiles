@@ -1,10 +1,10 @@
 abstract contract C {
     /// @param id Some identifier
     /// @return No value returned
-    function vote(uint id) public virtual returns (uint value);
+    function vote(uint256 id) public virtual returns (uint256 value);
 
     /// @return No value returned
-    function unvote(uint id) public virtual returns (uint value);
+    function unvote(uint256 id) public virtual returns (uint256 value);
 }
 // ----
 // DocstringParsingError 5856: (26-89): Documentation tag "@return No value returned" does not contain the name of its return parameter.

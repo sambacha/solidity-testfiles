@@ -1,15 +1,19 @@
 /// @a&b test
 contract C {
-	/// @custom:x^y test2
-	function f() public pure {}
-	/// @custom:
-	function g() public pure {}
-	/// @custom:abcDEF
-	function h() public pure {}
-	/// @custom:abc-def
-	function i() public pure {}
-	/// @custom
-	function j() public pure {}
+    /// @custom:x^y test2
+    function f() public pure {}
+
+    /// @custom:
+    function g() public pure {}
+
+    /// @custom:abcDEF
+    function h() public pure {}
+
+    /// @custom:abc-def
+    function i() public pure {}
+
+    /// @custom
+    function j() public pure {}
 }
 // ----
 // DocstringParsingError 6546: (0-14): Documentation tag @a&b not valid for contracts.

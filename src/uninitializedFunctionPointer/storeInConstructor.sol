@@ -1,18 +1,18 @@
 contract InvalidTest {
+    function() internal storedFn;
 
-  function() internal storedFn;
+    bool flag;
 
-  bool flag;
+    constructor() {
+        function() internal invalid;
+        storedFn = invalid;
+    }
 
-  constructor() {
-    function() internal invalid;
-    storedFn = invalid;
-  }
-  function f() public returns (uint) {
-    if (flag) return 2;
-    flag = true;
-    storedFn();
-  }
+    function f() public returns (uint256) {
+        if (flag) return 2;
+        flag = true;
+        storedFn();
+    }
 }
 // ====
 // compileToEwasm: also

@@ -1,6 +1,6 @@
 contract C {
     function f() public pure {
-        var (b, c);
+        var(b, c);
         b.WeMustNotReachHere();
         c.FailsToLookupToo();
     }

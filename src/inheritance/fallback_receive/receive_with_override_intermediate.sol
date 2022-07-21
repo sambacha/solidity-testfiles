@@ -1,9 +1,9 @@
 contract C {
-	receive() virtual external payable {}
+    receive() external payable virtual {}
 }
-contract D is C {
-}
+
+contract D is C {}
+
 contract E is D {
-	receive() override external payable {}
-}
-// ----
+    receive() external payable override {}
+} // ----

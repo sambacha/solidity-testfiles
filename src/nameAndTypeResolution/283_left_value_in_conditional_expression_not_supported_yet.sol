@@ -1,7 +1,7 @@
 contract C {
     function f() public {
-        uint x;
-        uint y;
+        uint256 x;
+        uint256 y;
         (true ? x : y) = 1;
     }
 }

@@ -10,7 +10,6 @@ library L {
     }
 }
 
-
 contract C {
     using L for L.S;
 
@@ -21,6 +20,5 @@ contract C {
         return x.f()[3];
     }
 }
-
 // ----
 // f() -> 2

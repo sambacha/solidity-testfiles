@@ -1,23 +1,24 @@
 contract C {
-	struct Struct {
-		function () external el;
-	}
-	Struct[] array;
-	int externalCalled = 0;
+    struct Struct {
+        function () external el;
+    }
 
-	function ext() external {
-		externalCalled++;
-	}
+    Struct[] array;
+    int256 externalCalled = 0;
 
-	function f() public {
-		array.push(Struct(this.ext));
-		array.push(array[0]);
+    function ext() external {
+        externalCalled++;
+    }
 
-		array[0].el();
-		array[1].el();
+    function f() public {
+        array.push(Struct(this.ext));
+        array.push(array[0]);
 
-		assert(externalCalled == 2);
-	}
+        array[0].el();
+        array[1].el();
+
+        assert(externalCalled == 2);
+    }
 }
 // ----
 // f() ->

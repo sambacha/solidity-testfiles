@@ -1,5 +1,5 @@
 contract C {
-    uint immutable public x = 1;
+    uint256 public immutable x = 1;
 }
 // ----
 // x() -> 1

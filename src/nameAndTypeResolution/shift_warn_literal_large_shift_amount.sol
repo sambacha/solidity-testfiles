@@ -1,7 +1,6 @@
 contract test {
-    function f() pure public returns(uint) {
-        uint x = 100;
+    function f() public pure returns (uint256) {
+        uint256 x = 100;
         return 10 << x;
     }
-}
-// ----
+} // ----

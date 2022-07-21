@@ -11,7 +11,10 @@ contract D {
         return (new C()).stateDecimal();
     }
 
-    function update(bool _bool, uint256 _decimal, bytes32 _bytes) public returns (bool, uint256, bytes32) {
+    function update(bool _bool, uint256 _decimal, bytes32 _bytes)
+        public
+        returns (bool, uint256, bytes32)
+    {
         stateBool = _bool;
         stateDecimal = _decimal;
         stateBytes = _bytes;

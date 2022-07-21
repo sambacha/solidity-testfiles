@@ -1,10 +1,14 @@
 contract C {
-    int[] s;
-    function f(int[] calldata b, uint256 start, uint256 end) public returns (int) {
+    int256[] s;
+
+    function f(int256[] calldata b, uint256 start, uint256 end)
+        public
+        returns (int256)
+    {
         s = b[start:end];
-        uint len = end - start;
+        uint256 len = end - start;
         assert(len == s.length);
-        for (uint i = 0; i < len; i++) {
+        for (uint256 i = 0; i < len; i++) {
             assert(b[start:end][i] == s[i]);
         }
         return s[0];

@@ -1,8 +1,8 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 library Lib {
     struct Items {
-        mapping (uint => uint) a;
+        mapping(uint256 => uint256) a;
     }
 
     function get() public returns (Items storage x) {
@@ -11,7 +11,7 @@ library Lib {
 }
 
 contract C {
-    function f() public returns(uint256 slot) {
+    function f() public returns (uint256 slot) {
         Lib.Items storage ptr = Lib.get();
         assembly { slot := ptr.slot }
     }

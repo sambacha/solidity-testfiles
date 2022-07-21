@@ -1,8 +1,14 @@
-pragma abicoder               v2;
+pragma abicoder v2;
+
 contract C {
-    struct S { uint a; T[] sub; }
-    struct T { uint[] x; }
-    function f() public returns (uint, S memory) {
+    struct S {
+        uint256 a;
+        T[] sub;
     }
-}
-// ----
+
+    struct T {
+        uint256[] x;
+    }
+
+    function f() public returns (uint256, S memory) {}
+} // ----

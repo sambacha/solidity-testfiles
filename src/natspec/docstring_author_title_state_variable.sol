@@ -1,7 +1,7 @@
 contract C {
     /// @title title
     /// @author author
-    uint private state;
+    uint256 private state;
 }
 // ----
 // DocstringParsingError 6546: (17-56): Documentation tag @author not valid for non-public state variables.

@@ -1,7 +1,8 @@
 contract c {
-    mapping(uint => uint) y;
-    function f() view public {
-        mapping(uint => uint) calldata x = y;
+    mapping(uint256 => uint256) y;
+
+    function f() public view {
+        mapping(uint256 => uint256) calldata x = y;
         x;
     }
 }

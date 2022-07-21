@@ -1,8 +1,6 @@
 contract C {
-    function f() public pure
-    {
-        // PDF PDF
-        // underflow ‬‬
+    function f() public pure { // PDF PDF
+            // underflow ‬‬
     }
 }
 // ----

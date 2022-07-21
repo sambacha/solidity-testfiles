@@ -1,6 +1,7 @@
 library L {
     function f(uint256) internal {}
 }
+
 contract C {
     function f() public pure returns (bytes4) {
         return L.f.selector;

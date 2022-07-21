@@ -1,4 +1,3 @@
 interface I {
-    function f(uint a) pure external returns (uint b);
-}
-// ----
+    function f(uint256 a) external pure returns (uint256 b);
+} // ----

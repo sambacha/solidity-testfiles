@@ -1,11 +1,12 @@
 contract C {
     function f(bytes memory _a, bytes calldata _b, bytes memory _c)
         public
-        returns (uint, bytes1, bytes1, bytes1)
+        returns (uint256, bytes1, bytes1, bytes1)
     {
         return (_a.length + _b.length + _c.length, _a[1], _b[1], _c[1]);
     }
-    function g() public returns (uint, bytes1, bytes1, bytes1) {
+
+    function g() public returns (uint256, bytes1, bytes1, bytes1) {
         bytes memory x = new bytes(3);
         bytes memory y = new bytes(4);
         bytes memory z = new bytes(7);

@@ -1,5 +1,5 @@
 contract C {
-    function f(uint y) public pure {
+    function f(uint256 y) public pure {
         (4(y)) = 2;
     }
 }

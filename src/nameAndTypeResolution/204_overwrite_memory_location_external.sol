@@ -1,4 +1,3 @@
 contract C {
-    function f(uint[] memory a) external {}
-}
-// ----
+    function f(uint256[] memory a) external {}
+} // ----

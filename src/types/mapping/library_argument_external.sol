@@ -1,5 +1,3 @@
 library L {
-    function f(mapping(uint => uint) storage) external pure {
-    }
-}
-// ----
+    function f(mapping(uint256 => uint256) storage) external pure {}
+} // ----

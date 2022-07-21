@@ -1,13 +1,15 @@
 contract C {
-    function f() pure public {
+    function f() public pure {
         function () external nonpayFun;
         nonpayFun();
     }
-    function g() pure public {
+
+    function g() public pure {
         function () external view viewFun;
         viewFun();
     }
-    function h() view public {
+
+    function h() public view {
         function () external nonpayFun;
         nonpayFun();
     }

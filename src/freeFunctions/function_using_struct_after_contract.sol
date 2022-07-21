@@ -1,6 +1,11 @@
 contract C {
-    struct S { uint x; }
+    struct S {
+        uint256 x;
+    }
 }
-function f() returns (uint) { S storage t; }
+
+function f() returns (uint256) {
+    S storage t;
+}
 // ----
 // DeclarationError 7920: (70-71): Identifier not found or not unique.

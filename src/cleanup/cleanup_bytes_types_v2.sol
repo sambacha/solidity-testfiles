@@ -1,5 +1,4 @@
-pragma abicoder               v2;
-
+pragma abicoder v2;
 
 // Checks that bytesXX types are properly cleaned before they are compared.
 contract C {

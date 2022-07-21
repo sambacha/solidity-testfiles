@@ -1,5 +1,6 @@
 contract C {
-    uint immutable x;
+    uint256 immutable x;
+
     constructor() {
         x = 3 + x;
     }

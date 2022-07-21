@@ -1,7 +1,8 @@
 contract D {
-    mapping (uint => uint) a;
+    mapping(uint256 => uint256) a;
+
     function foo() public view {
-        mapping (uint => int) storage c = a;
+        mapping(uint256 => int256) storage c = a;
     }
 }
 // ----

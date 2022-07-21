@@ -1,4 +1,5 @@
 pragma abicoder v1;
+
 contract C {
     function f() public pure returns (string[][] memory) {}
 }

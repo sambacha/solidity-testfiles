@@ -1,14 +1,17 @@
 contract A {
-    uint x;
+    uint256 x;
+
     constructor() {
         x = 42;
     }
-    function f() public returns(uint256) {
+
+    function f() public returns (uint256) {
         return x;
     }
 }
+
 contract B is A {
-    uint public y = f();
+    uint256 public y = f();
 }
 // ====
 // compileToEwasm: also

@@ -1,5 +1,5 @@
 contract B {
-    uint immutable x;
+    uint256 immutable x;
 
     constructor() {
         x = 3;
@@ -7,9 +7,9 @@ contract B {
 }
 
 contract C is B {
-    uint immutable y;
+    uint256 immutable y;
+
     constructor() {
         y = 3;
     }
-}
-// ----
+} // ----

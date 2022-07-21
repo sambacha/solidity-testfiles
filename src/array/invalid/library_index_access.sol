@@ -1,5 +1,5 @@
 library C {
-    function f() view public {
+    function f() public view {
         C[0];
     }
 }

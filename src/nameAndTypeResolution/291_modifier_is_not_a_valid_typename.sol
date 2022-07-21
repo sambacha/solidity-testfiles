@@ -1,5 +1,7 @@
 contract test {
-    modifier mod() { _; }
+    modifier mod() {
+        _;
+    }
 
     function f() public {
         mod g;

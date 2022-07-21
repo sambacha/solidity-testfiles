@@ -1,8 +1,6 @@
 contract C {
-    function f() public pure
-    {
-        // PDF RLO
-        // underflow ‬‮
+    function f() public pure { // PDF RLO
+            // underflow ‬‮
     }
 }
 // ----

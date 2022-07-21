@@ -1,5 +1,6 @@
 contract c {
-    uint[] storageArray;
+    uint256[] storageArray;
+
     function f() public {
         storageArray.length = 3;
     }

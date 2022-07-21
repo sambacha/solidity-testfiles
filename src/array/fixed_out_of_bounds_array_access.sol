@@ -14,7 +14,6 @@ contract c {
         return data.length;
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

@@ -1,4 +1,4 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
     struct S {
@@ -12,7 +12,7 @@ contract C {
         S s;
     }
 
-    uint[79] r;
+    uint256[79] r;
     X x;
 
     function f() external returns (uint32, uint128, uint256) {
@@ -21,7 +21,6 @@ contract C {
         return (x.s.a, x.s.b, x.s.c);
     }
 }
-
 // ====
 // compileToEwasm: also
 // ----

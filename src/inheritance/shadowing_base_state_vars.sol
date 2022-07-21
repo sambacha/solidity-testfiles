@@ -1,8 +1,9 @@
 contract A {
-	uint i;
+    uint256 i;
 }
+
 contract B is A {
-	uint i;
+    uint256 i;
 }
 // ----
 // DeclarationError 9097: (43-49): Identifier already declared.

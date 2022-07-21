@@ -1,10 +1,10 @@
 contract C {
-        function f() payable public returns (C) {
+    function f() public payable returns (C) {
         return this;
     }
-    function g() pure public returns (bytes4) {
+
+    function g() public pure returns (bytes4) {
         C x = C(address(0x123));
         return x.f.selector;
     }
-}
-// ----
+} // ----

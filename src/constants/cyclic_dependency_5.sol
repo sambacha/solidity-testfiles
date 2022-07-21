@@ -1,7 +1,7 @@
 contract C {
-  uint constant a = uint(keccak256(abi.encode(d)));
-  uint c = uint(keccak256(abi.encode(d)));
-  uint constant d = a;
+    uint256 constant a = uint256(keccak256(abi.encode(d)));
+    uint256 c = uint256(keccak256(abi.encode(d)));
+    uint256 constant d = a;
 }
 // ----
 // TypeError 6161: (15-63): The value of the constant a has a cyclic dependency via d.

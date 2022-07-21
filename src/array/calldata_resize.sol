@@ -1,5 +1,5 @@
 contract C {
-    function f (uint256[] calldata x) external pure {
+    function f(uint256[] calldata x) external pure {
         x.length = 42;
     }
 }

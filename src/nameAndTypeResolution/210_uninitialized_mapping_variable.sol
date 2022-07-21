@@ -1,6 +1,6 @@
 contract C {
     function f() public {
-        mapping(uint => uint) storage x;
+        mapping(uint256 => uint256) storage x;
         x;
     }
 }

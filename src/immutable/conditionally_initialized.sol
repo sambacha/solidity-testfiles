@@ -1,8 +1,8 @@
 contract C {
-    uint immutable x;
+    uint256 immutable x;
+
     constructor() {
-        if (false)
-            x = 1;
+        if (false) x = 1;
     }
 }
 // ----

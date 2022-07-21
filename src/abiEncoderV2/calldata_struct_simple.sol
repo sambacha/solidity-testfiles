@@ -1,7 +1,9 @@
-pragma abicoder               v2;
+pragma abicoder v2;
 
 contract C {
-    struct S { uint256 a; }
+    struct S {
+        uint256 a;
+    }
 
     function f(S calldata s) external returns (bytes memory) {
         return abi.encode(s);

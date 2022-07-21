@@ -1,21 +1,27 @@
 contract c1 {
     function f() payable payable {}
 }
+
 contract c2 {
     function f() view view {}
 }
+
 contract c3 {
     function f() pure pure {}
 }
+
 contract c4 {
     function f() pure view {}
 }
+
 contract c5 {
     function f() payable view {}
 }
+
 contract c6 {
     function f() pure payable {}
 }
+
 contract c7 {
     function f() view payable {}
 }

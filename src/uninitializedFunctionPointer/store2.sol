@@ -1,39 +1,37 @@
 pragma solidity >=0.4.0 <0.9.0;
 
 contract InvalidTest {
+    function() internal storedFn;
+    uint256 public x;
 
-  function() internal storedFn;
-  uint public x;
+    constructor() {
+        uint256 _y1;
+        uint256 _y2;
+        uint256 _y3;
+        uint256 _y4;
+        uint256 _y5;
+        uint256 _y6;
+        uint256 _y7;
+        uint256 _y8;
+        uint256 _y9;
+        uint256 _y10;
+        uint256 _y11;
+        uint256 _y12;
+        uint256 _y13;
+        uint256 _y14;
 
-  constructor() {
-    uint _y1;
-    uint _y2;
-    uint _y3;
-    uint _y4;
-    uint _y5;
-    uint _y6;
-    uint _y7;
-    uint _y8;
-    uint _y9;
-    uint _y10;
-    uint _y11;
-    uint _y12;
-    uint _y13;
-    uint _y14;
+        function() internal invalid;
+        storedFn = invalid;
+    }
 
+    function run() public {
+        // this did not always cause revert in the past
+        storedFn();
+    }
 
-    function() internal invalid;
-    storedFn = invalid;
-  }
-
-  function run() public {
-    // this did not always cause revert in the past
-    storedFn();
-  }
-
-  function z() public {
-      x++;
-  }
+    function z() public {
+        x++;
+    }
 }
 // ====
 // compileToEwasm: also

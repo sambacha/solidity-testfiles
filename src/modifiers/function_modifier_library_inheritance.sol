@@ -4,6 +4,7 @@ library L {
     struct S {
         uint256 v;
     }
+
     modifier mod(S storage s) {
         s.v++;
         _;
@@ -14,10 +15,11 @@ library L {
     }
 }
 
-
 contract Test {
     using L for *;
+
     L.S s;
+
     modifier mod(L.S storage) {
         revert();
         _;
@@ -29,6 +31,5 @@ contract Test {
         return s.v;
     }
 }
-
 // ----
 // f() -> 0x202

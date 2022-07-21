@@ -1,4 +1,3 @@
 contract C {
-    function g() view public { }
-}
-// ----
+    function g() public view {}
+} // ----

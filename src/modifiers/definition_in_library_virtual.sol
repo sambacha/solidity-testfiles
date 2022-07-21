@@ -1,4 +1,5 @@
 library L {
-    modifier m { _; }
-}
-// ----
+    modifier m() {
+        _;
+    }
+} // ----
