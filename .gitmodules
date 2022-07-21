@@ -1,0 +1,3 @@
+[submodule "prettier-config-solidity"]
+	path = prettier-config-solidity
+	url = https://github.com/sambacha/prettier-config-solidity
